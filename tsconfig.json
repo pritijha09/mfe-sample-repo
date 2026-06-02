@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -11,6 +12,13 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "shared-material": ["./dist/shared-material"],
+      "shared-models": ["./projects/shared-models/src/public-api.ts"],
+      "shared-state": ["./projects/shared-state/src/public-api.ts"],
+      "shared-theme": ["./projects/shared-theme/src/public-api.ts"],
+      "shared-ui": ["./projects/shared-ui/src/public-api.ts"]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -40,6 +48,54 @@
     },
     {
       "path": "./projects/products-mf/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/home-mf/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/home-mf/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/cart-mf/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/cart-mf/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/profile-mf/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/profile-mf/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-state/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-state/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-models/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-models/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-theme/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-theme/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-material/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-material/tsconfig.spec.json"
     }
   ]
 }

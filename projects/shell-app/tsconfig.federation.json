@@ -2,10 +2,17 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
+    "rootDir": "../../",
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "../../projects/shared-ui/src/**/*.ts",
+    "..\\..\\dist\\shared-material",
+    "..\\shared-models\\src\\public-api.ts",
+    "..\\shared-state\\src\\public-api.ts",
+    "..\\shared-theme\\src\\public-api.ts",
+    "..\\shared-ui\\src\\public-api.ts"
   ],
   "exclude": [
     "src/**/*.spec.ts"

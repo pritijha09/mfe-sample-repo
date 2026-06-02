@@ -12,4 +12,9 @@ export const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule('products', './Routes').then((m) => m.routes),
   },
+  {
+    path: 'products/:id',
+    loadChildren: () =>
+      loadRemoteModule('products', './Routes').then((m) => m.routes),
+  }
 ];
