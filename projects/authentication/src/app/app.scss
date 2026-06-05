@@ -1,0 +1,29 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-banner {
+  flex: 1;
+  padding: 60px;
+  background: var(--primary-color);
+  color: white;
+}
+
+.auth-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width:768px) {
+
+  .auth-banner {
+    display: none;
+  }
+
+  .auth-form {
+    width: 100%;
+  }
+}

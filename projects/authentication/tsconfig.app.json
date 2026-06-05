@@ -3,16 +3,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
-    "declaration": true,
-    "declarationMap": true,
+    "outDir": "../../out-tsc/app",
     "types": [],
-    "paths": {
+     "paths": {
       "@shared-material": [
         "./dist/shared-material"
       ]
     }
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["**/*.spec.ts"]
+  "exclude": ["src/**/*.spec.ts"]
 }
