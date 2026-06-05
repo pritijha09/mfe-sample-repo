@@ -43,4 +43,8 @@ export class App {
   );
 }, 1000);
   }
+
+  goToAuth() {
+    this.router.navigate(['/auth']);
+  }
 }

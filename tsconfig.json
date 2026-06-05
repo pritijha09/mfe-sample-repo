@@ -96,6 +96,12 @@
     },
     {
       "path": "./projects/shared-material/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/auth-mfe/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/auth-mfe/tsconfig.spec.json"
     }
   ]
 }
