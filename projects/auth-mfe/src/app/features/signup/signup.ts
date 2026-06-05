@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SharedMaterialModule } from 'shared-material';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',

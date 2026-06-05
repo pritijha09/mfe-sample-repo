@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SharedMaterialModule } from 'shared-material';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -41,6 +41,14 @@ export class Login {
     this.loginForm.reset();
     this.hidePassword = true;
     this.router.navigate(['/auth/signup']);
+  }
+
+  navigateToForgotPassword() {
+    this.router.navigate(['/auth/forgot-password']);
+  }
+
+  navigateToLoginWithOtp() {
+    this.router.navigate(['/auth/otp-verification']);
   }
 
 

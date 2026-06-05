@@ -109,14 +109,6 @@
         type="password"
         formControlName="confirmPassword">
 
-      @if(signupForm.controls['confirmPassword'].touched &&
-          signupForm.controls['confirmPassword'].invalid) {
-
-        <mat-error>
-         Passwords do not match
-        </mat-error>
-      }
-
     </mat-form-field>
 
     <mat-checkbox formControlName="acceptTerms">

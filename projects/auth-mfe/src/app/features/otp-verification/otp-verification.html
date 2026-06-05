@@ -1,1 +1,136 @@
-<p>otp-verification works!</p>
+<div class="otp-container">
+
+  <mat-card class="otp-card">
+
+    <div class="header">
+
+      <div class="logo">
+        🎂
+      </div>
+
+      <h1>Login With OTP</h1>
+
+      <p>
+        Login instantly using your mobile number
+      </p>
+
+    </div>
+
+    <form [formGroup]="otpLoginForm">
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>
+          Mobile Number
+        </mat-label>
+
+        <input
+          matInput
+          maxlength="10"
+          formControlName="mobileNumber"
+          placeholder="Enter mobile number">
+
+        <mat-icon matPrefix>
+          phone
+        </mat-icon>
+
+        @if(
+          otpLoginForm.controls.mobileNumber.touched &&
+          otpLoginForm.controls.mobileNumber.errors?.['required']
+        ) {
+
+          <mat-error>
+            Mobile number is required
+          </mat-error>
+
+        }
+
+        @if(
+          otpLoginForm.controls.mobileNumber.touched &&
+          otpLoginForm.controls.mobileNumber.errors?.['pattern']
+        ) {
+
+          <mat-error>
+            Enter valid 10 digit mobile number
+          </mat-error>
+
+        }
+
+      </mat-form-field>
+
+      @if(!otpSent) {
+
+        <button
+          mat-raised-button
+          class="primary-btn"
+          type="button"
+          (click)="sendOtp()">
+
+          Send OTP
+
+        </button>
+
+      }
+
+      @if(otpSent) {
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>
+            Enter OTP
+          </mat-label>
+
+          <input
+            matInput
+            maxlength="6"
+            formControlName="otp">
+
+          <mat-icon matPrefix>
+            lock
+          </mat-icon>
+
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          class="primary-btn"
+          type="button"
+          (click)="verifyOtp()">
+
+          Verify OTP
+
+        </button>
+
+      }
+
+      <div class="helper-text">
+
+        OTP will be sent to your
+        registered mobile number.
+
+      </div>
+
+      <button
+        mat-stroked-button
+        routerLink="/auth"
+        class="secondary-btn">
+
+        Back To Login
+
+      </button>
+
+      <div class="signup-link">
+
+        New Customer?
+
+        <a routerLink="/auth/signup">
+          Create Account
+        </a>
+
+      </div>
+
+    </form>
+
+  </mat-card>
+
+</div>
