@@ -3,6 +3,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full',
+  },
+  {
     path: 'admin',
     loadChildren: () =>
       loadRemoteModule('admin', './Routes').then((m) => m.routes),
