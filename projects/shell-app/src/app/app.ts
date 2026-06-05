@@ -47,4 +47,8 @@ export class App {
   goToAuth() {
     this.router.navigate(['/auth']);
   }
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
 }

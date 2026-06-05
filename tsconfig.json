@@ -102,6 +102,18 @@
     },
     {
       "path": "./projects/auth-mfe/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/checkout-mfe/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/checkout-mfe/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/orders-mfe/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/orders-mfe/tsconfig.spec.json"
     }
   ]
 }

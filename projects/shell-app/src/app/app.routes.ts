@@ -18,6 +18,11 @@ export const routes: Routes = [
       loadRemoteModule('auth-mfe', './Routes').then((m) => m.routes),
   },
   {
+    path: 'home',
+    loadChildren: () =>
+      loadRemoteModule('home-mf', './Routes').then((m) => m.routes),
+  },
+  {
     path: 'products',
     loadChildren: () =>
       loadRemoteModule('products', './Routes').then((m) => m.routes),

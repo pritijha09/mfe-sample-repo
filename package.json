@@ -8,7 +8,7 @@
     "start:shell": "ng serve shell-app --port 4200",
     "start:products": "ng serve products-mf --port 4201",
     "start:auth": "ng serve auth-mfe --port 4202",
-    "start:admin": "ng serve admin-mf --port 4203",
+    "start:home": "ng serve home-mf --port 4204",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
