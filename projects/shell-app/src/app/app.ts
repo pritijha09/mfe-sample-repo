@@ -1,11 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { ButtonComponent } from 'shared-ui';
 import { AppState } from 'shared-state';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })

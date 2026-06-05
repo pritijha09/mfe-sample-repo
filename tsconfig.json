@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
-      "shared-material": ["./dist/shared-material"],
+      "shared-material": ["./projects/shared-material/src/public-api.ts"],
       "shared-models": ["./projects/shared-models/src/public-api.ts"],
       "shared-state": ["./projects/shared-state/src/public-api.ts"],
       "shared-theme": ["./projects/shared-theme/src/public-api.ts"],

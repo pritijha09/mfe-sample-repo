@@ -1,1 +1,144 @@
-<p>signup works!</p>
+<mat-card class="signup-card">
+
+  <div class="header">
+    <h1>🎂 Create Account</h1>
+    <p>Join CakeShop and order your favourite cakes</p>
+  </div>
+
+  <form
+    [formGroup]="signupForm"
+    (ngSubmit)="register()">
+
+    <div class="row">
+
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          formControlName="firstName">
+
+        @if(signupForm.controls['firstName'].touched &&
+            signupForm.controls['firstName'].invalid) {
+
+          <mat-error>
+            First Name is required
+          </mat-error>
+        }
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          formControlName="lastName">
+
+        @if(signupForm.controls['lastName'].touched &&
+            signupForm.controls['lastName'].invalid) {
+
+          <mat-error>
+            Last Name is required
+          </mat-error>
+        }
+
+      </mat-form-field>
+
+    </div>
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>Email</mat-label>
+
+      <input
+        matInput
+        formControlName="email">
+
+      @if(signupForm.controls['email'].touched &&
+          signupForm.controls['email'].invalid) {
+
+        <mat-error>
+          Enter valid email
+        </mat-error>
+      }
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>Mobile Number</mat-label>
+
+      <input
+        matInput
+        formControlName="mobile">
+
+      @if(signupForm.controls['mobile'].touched &&
+          signupForm.controls['mobile'].invalid) {
+
+        <mat-error>
+          Enter valid mobile number
+        </mat-error>
+      }
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>Password</mat-label>
+
+      <input
+        matInput
+        type="password"
+        formControlName="password">
+
+      @if(signupForm.controls['password'].touched &&
+          signupForm.controls['password'].invalid) {
+
+        <mat-error>
+          Password must be at least 6 characters long
+        </mat-error>
+      }
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>Confirm Password</mat-label>
+
+      <input
+        matInput
+        type="password"
+        formControlName="confirmPassword">
+
+      @if(signupForm.controls['confirmPassword'].touched &&
+          signupForm.controls['confirmPassword'].invalid) {
+
+        <mat-error>
+         Passwords do not match
+        </mat-error>
+      }
+
+    </mat-form-field>
+
+    <mat-checkbox formControlName="acceptTerms">
+      I agree to Terms & Conditions
+    </mat-checkbox>
+
+    <button
+      mat-raised-button
+      class="signup-btn"
+      type="submit">
+      Create Account
+    </button>
+
+    <button
+      mat-stroked-button
+      class="login-btn"
+      type="button"
+      (click)="navigateToLogin()">
+
+      Already have an account? Login
+    </button>
+
+  </form>
+
+</mat-card>
