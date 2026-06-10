@@ -1,1 +1,40 @@
-<p>product-gallery works!</p>
+<div class="gallery-container">
+
+  <div class="main-image-card">
+
+    <button
+      mat-icon-button
+      class="wishlist-btn">
+
+      <mat-icon>
+        favorite_border
+      </mat-icon>
+
+    </button>
+
+    <img
+      [src]="selectedImage()"
+      alt="Cake Image">
+
+  </div>
+
+  <div class="thumbnail-container">
+
+    @for(image of images(); track image){
+
+      <div
+        class="thumbnail"
+        [class.active]="selectedImage() === image"
+        (click)="changeImage(image)">
+
+        <img
+          [src]="image"
+          alt="Thumbnail">
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

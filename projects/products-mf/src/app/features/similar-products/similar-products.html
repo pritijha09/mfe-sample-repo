@@ -1,1 +1,42 @@
-<p>similar-products works!</p>
+<section class="similar-products-section">
+
+  <div class="section-header">
+
+    <div>
+
+      <span class="section-tag">
+        Recommended For You
+      </span>
+
+      <h2>
+        You May Also Like
+      </h2>
+
+      <p>
+        Customers who bought this cake also loved these.
+      </p>
+
+    </div>
+
+    <button
+      mat-stroked-button>
+
+      View All
+
+    </button>
+
+  </div>
+
+  <div class="product-grid">
+
+    @for(product of similarProducts(); track product.id){
+
+      <app-product-card
+        [product]="{ id: product.id, name: product.name, price: product.price, originalPrice: product.originalPrice, rating: product.rating, reviewCount: product.reviewCount, imageUrl: product.imageUrl, description: product.description, isBestSeller: product.isBestSeller, isEggless: product.isEggless, weight: product.weight, category: 'Uncategorized' }">
+      </app-product-card>
+
+    }
+
+  </div>
+
+</section>

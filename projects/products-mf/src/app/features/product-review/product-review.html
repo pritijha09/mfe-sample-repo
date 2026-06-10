@@ -1,1 +1,187 @@
-<p>product-review works!</p>
+<section class="reviews-section">
+
+  <div class="section-header">
+
+    <h2>
+      Customer Reviews
+    </h2>
+
+    <p>
+      Real experiences from our happy customers
+    </p>
+
+  </div>
+
+  <!-- Review Summary -->
+
+  <div class="review-summary">
+
+    <div class="overall-rating">
+
+      <h1>4.8</h1>
+
+      <div class="stars">
+
+        ★★★★★
+
+      </div>
+
+      <p>
+        Based on 245 Reviews
+      </p>
+
+    </div>
+
+    <div class="rating-breakdown">
+
+      <div class="rating-row">
+
+        <span>5 ★</span>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="80">
+        </mat-progress-bar>
+
+        <span>180</span>
+
+      </div>
+
+      <div class="rating-row">
+
+        <span>4 ★</span>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="60">
+        </mat-progress-bar>
+
+        <span>45</span>
+
+      </div>
+
+      <div class="rating-row">
+
+        <span>3 ★</span>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="25">
+        </mat-progress-bar>
+
+        <span>15</span>
+
+      </div>
+
+      <div class="rating-row">
+
+        <span>2 ★</span>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="10">
+        </mat-progress-bar>
+
+        <span>3</span>
+
+      </div>
+
+      <div class="rating-row">
+
+        <span>1 ★</span>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="5">
+        </mat-progress-bar>
+
+        <span>2</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Customer Reviews -->
+
+  <div class="review-list">
+
+    @for(review of reviews(); track review.id){
+
+      <mat-card class="review-card">
+
+        <div class="review-header">
+
+          <div class="avatar">
+
+            {{ review.initial }}
+
+          </div>
+
+          <div>
+
+            <h4>
+
+              {{ review.name }}
+
+            </h4>
+
+            <span class="verified">
+
+              ✓ Verified Purchase
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="review-rating">
+
+          ★★★★★
+
+        </div>
+
+        <p class="review-message">
+
+          {{ review.comment }}
+
+        </p>
+
+        <div class="review-images">
+
+          @for(image of review.images; track image){
+
+            <img
+              [src]="image"
+              alt="review">
+
+          }
+
+        </div>
+
+        <div class="review-footer">
+
+          <span>
+
+            {{ review.date }}
+
+          </span>
+
+          <button
+            mat-button>
+
+            👍 Helpful ({{ review.helpful }})
+
+          </button>
+
+        </div>
+
+      </mat-card>
+
+    }
+
+  </div>
+
+</section>

@@ -15,8 +15,8 @@ export class CategorySection {
 
   constructor(private router: Router) {}
 
-  redirectToCategory() {
-    // Implement navigation logic here, e.g., using Angular Router
-    console.log(`Redirecting to category: birthday`);
-  }
+ redirectToCategory(category: string): void {
+  debugger
+  this.router.navigate(['/products/category', category]);
+}
 }

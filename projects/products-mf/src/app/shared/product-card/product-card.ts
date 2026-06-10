@@ -13,4 +13,8 @@ import { SharedMaterialModule } from 'shared-material';
 export class ProductCard {
   @Input({ required: true })
   product!: Product;
+
+  addToCart(product: Product){
+    //add to cart
+  }
 }

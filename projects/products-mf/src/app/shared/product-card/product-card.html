@@ -73,12 +73,12 @@
 
   <mat-card-actions>
 
-    <button
+    <button (click)="addToCart(product); $event.stopPropagation()"
       mat-flat-button
       color="primary">
 
       Add To Cart
-
+    
     </button>
 
   </mat-card-actions>

@@ -1,1 +1,162 @@
-<p>category-product works!</p>
+<section class="category-page">
+
+  <!-- Breadcrumb -->
+
+  <div class="breadcrumb">
+
+    <span>Home</span>
+
+    <mat-icon>chevron_right</mat-icon>
+
+    <span>Cakes</span>
+
+    <mat-icon>chevron_right</mat-icon>
+
+    <span class="active">
+      Birthday Cakes
+    </span>
+
+  </div>
+
+  <!-- Hero Banner -->
+
+  <div class="category-banner">
+
+    <div class="banner-content">
+
+      <span class="category-tag">
+        🎂 Cake Collection
+      </span>
+
+      <h1>
+        Birthday Cakes
+      </h1>
+
+      <p>
+        Discover handcrafted birthday cakes
+        baked fresh for every celebration.
+      </p>
+
+      <div class="stats">
+
+        <div>
+          <h3>120+</h3>
+          <span>Cakes</span>
+        </div>
+
+        <div>
+          <h3>4.9★</h3>
+          <span>Rating</span>
+        </div>
+
+        <div>
+          <h3>50K+</h3>
+          <span>Orders</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="banner-image">
+      🎂
+    </div>
+
+  </div>
+
+  <!-- Toolbar -->
+
+  <div class="toolbar">
+
+    <div class="results">
+
+      120 Cakes Found
+
+    </div>
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>
+        Sort By
+      </mat-label>
+
+      <mat-select>
+
+        <mat-option>
+          Popularity
+        </mat-option>
+
+        <mat-option>
+          Price Low To High
+        </mat-option>
+
+        <mat-option>
+          Price High To Low
+        </mat-option>
+
+        <mat-option>
+          Customer Rating
+        </mat-option>
+
+      </mat-select>
+
+    </mat-form-field>
+
+  </div>
+
+  <!-- Active Filters -->
+
+  <div class="active-filters">
+
+    <mat-chip-row>
+      Chocolate
+      <mat-icon matChipRemove>
+        close
+      </mat-icon>
+    </mat-chip-row>
+
+    <mat-chip-row>
+      Eggless
+      <mat-icon matChipRemove>
+        close
+      </mat-icon>
+    </mat-chip-row>
+
+    <mat-chip-row>
+      1 Kg
+      <mat-icon matChipRemove>
+        close
+      </mat-icon>
+    </mat-chip-row>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="content">
+
+    <aside class="sidebar">
+
+      <app-filter-sidebar />
+
+    </aside>
+
+    <section class="products">
+
+      <div class="product-grid">
+
+        @for(product of products(); track product.id){
+
+          <app-product-card
+            [product]="product">
+          </app-product-card>
+
+        }
+
+      </div>
+
+    </section>
+
+  </div>
+
+</section>

@@ -1,1 +1,211 @@
-<p>product-details works!</p>
+<section class="product-details-page">
+
+  <!-- Breadcrumb -->
+
+  <div class="breadcrumb">
+
+    <span>Home</span>
+
+    <mat-icon>chevron_right</mat-icon>
+
+    <span>Cakes</span>
+
+    <mat-icon>chevron_right</mat-icon>
+
+    <span class="active">
+      Chocolate Truffle Cake
+    </span>
+
+  </div>
+
+  <!-- Main Section -->
+
+  <div class="product-layout">
+
+    <!-- Gallery -->
+
+    <div class="gallery-section">
+
+      <app-product-gallery />
+
+    </div>
+
+    <!-- Product Info -->
+
+    <div class="product-info">
+
+      <span class="badge">
+        Bestseller
+      </span>
+
+      <h1>
+        Chocolate Truffle Cake
+      </h1>
+
+      <div class="rating">
+
+        ⭐⭐⭐⭐⭐
+
+        <span>
+          4.9 (245 Reviews)
+        </span>
+
+      </div>
+
+      <div class="price-section">
+
+        <span class="price">
+          ₹699
+        </span>
+
+        <span class="old-price">
+          ₹899
+        </span>
+
+        <span class="discount">
+          20% OFF
+        </span>
+
+      </div>
+
+      <p class="description">
+
+        Rich chocolate sponge cake layered
+        with premium truffle cream and
+        chocolate flakes.
+
+      </p>
+
+      <!-- Weight -->
+
+      <div class="section">
+
+        <h3>Select Weight</h3>
+
+        <mat-chip-set>
+
+          <mat-chip-option selected>
+            500g
+          </mat-chip-option>
+
+          <mat-chip-option>
+            1 Kg
+          </mat-chip-option>
+
+          <mat-chip-option>
+            2 Kg
+          </mat-chip-option>
+
+        </mat-chip-set>
+
+      </div>
+
+      <!-- Quantity -->
+
+      <div class="section">
+
+        <h3>Quantity</h3>
+
+        <app-quantity-selector />
+
+      </div>
+
+      <!-- Delivery Date -->
+
+      <!-- <div class="section">
+
+        <h3>Delivery Date</h3>
+
+        <mat-form-field appearance="outline">
+
+          <input
+            matInput
+            [matDatepicker]="picker">
+
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker">
+          </mat-datepicker-toggle>
+
+          <mat-datepicker #picker />
+
+        </mat-form-field>
+
+      </div> -->
+
+      <!-- Cake Message -->
+
+      <div class="section">
+
+        <h3>Message On Cake</h3>
+
+        <mat-form-field appearance="outline">
+
+          <textarea
+            matInput
+            rows="3"
+            placeholder="Happy Birthday Rahul">
+          </textarea>
+
+        </mat-form-field>
+
+      </div>
+
+      <!-- Actions -->
+
+      <div class="actions">
+
+        <button
+          mat-flat-button
+          color="primary">
+
+          Add To Cart
+
+        </button>
+
+        <button
+          mat-stroked-button>
+
+          Buy Now
+
+        </button>
+
+      </div>
+
+      <!-- Features -->
+
+      <div class="features">
+
+        <div>
+
+          🚚 Free Delivery
+
+        </div>
+
+        <div>
+
+          🎂 Freshly Baked
+
+        </div>
+
+        <div>
+
+          ⭐ Premium Quality
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Reviews -->
+
+  <app-product-review />
+
+  <!-- Similar Products -->
+
+  <app-similar-products />
+
+</section>

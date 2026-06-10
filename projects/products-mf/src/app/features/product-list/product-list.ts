@@ -3,6 +3,7 @@ import { SharedMaterialModule } from 'shared-material';
 import { FilterSidebar } from '../../shared/filter-sidebar/filter-sidebar';
 import { ProductCard } from '../../shared/product-card/product-card';
 import { Product } from '../../core/models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -16,6 +17,7 @@ import { Product } from '../../core/models/product.model';
   styleUrl: './product-list.scss',
 })
 export class ProductList {
+  constructor(private router: Router){}
     products = signal<Product[]>([
     {
       id: 1,
@@ -119,4 +121,11 @@ export class ProductList {
       weight: '2 Kg'
     }
   ]);
+
+  goToProductDetails(id: any) {
+    this.router.navigate([
+      '/products',
+      id
+    ]);
+  }
 }

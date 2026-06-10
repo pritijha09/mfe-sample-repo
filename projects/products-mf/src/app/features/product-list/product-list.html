@@ -42,7 +42,7 @@
 
       @for(product of products(); track product.id){
 
-        <app-product-card
+        <app-product-card (click)="goToProductDetails(product.id)"
           [product]="product">
         </app-product-card>
 
