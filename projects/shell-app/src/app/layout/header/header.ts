@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SharedMaterialModule } from 'shared-material';
+import { CartStore } from 'shared-state';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +11,6 @@ import { SharedMaterialModule } from 'shared-material';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  public readonly cartStore = inject(CartStore);
+}
