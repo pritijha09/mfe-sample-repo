@@ -1,4 +1,4 @@
-import { computed, Injectable, signal } from "@angular/core";
+import { computed, effect, Injectable, signal } from "@angular/core";
 
 export interface CartItem {
     id: number;
@@ -12,6 +12,7 @@ export interface CartItem {
 })
 
 export class CartStore {
+    private readonly STORAGE_KEY = 'cakehub-cart';
     private readonly cartItems = signal<CartItem[]>([]);
     readonly items = this.cartItems.asReadonly();
 
@@ -32,6 +33,36 @@ export class CartStore {
         0
       )
     );
+
+    constructor() {
+
+    this.loadCart();
+
+    effect(() => {
+
+      localStorage.setItem(
+        this.STORAGE_KEY,
+        JSON.stringify(this.cartItems())
+      );
+
+    });
+
+  }
+
+   private loadCart(): void {
+
+    const cart =
+      localStorage.getItem(
+        this.STORAGE_KEY
+      );
+
+    if (cart) {
+
+      this.cartItems.set(
+        JSON.parse(cart)
+      );
+    }
+  }
 
     addToCart(product: CartItem): void {
 
