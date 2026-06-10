@@ -1,0 +1,98 @@
+.filter-sidebar {
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  position: sticky;
+
+  top: 100px;
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,.08);
+}
+
+.filter-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  h2 {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 600;
+  }
+}
+
+.price-values {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #666;
+
+  font-weight: 500;
+}
+
+mat-expansion-panel {
+
+  margin-bottom: 12px;
+
+  border-radius: 12px !important;
+
+  box-shadow: none !important;
+
+  border: 1px solid #eee;
+}
+
+mat-checkbox {
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+mat-radio-button {
+
+  display: block;
+
+  margin-bottom: 12px;
+}
+
+mat-chip-set {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+mat-chip-option {
+
+  cursor: pointer;
+}
+
+.apply-btn {
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  height: 48px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+}

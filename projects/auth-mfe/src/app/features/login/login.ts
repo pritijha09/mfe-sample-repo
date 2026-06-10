@@ -26,6 +26,7 @@ export class Login {
   }
 
   login() {
+    this.router.navigate(['/home']);
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
       // Handle login logic here, e.g., call an authentication service

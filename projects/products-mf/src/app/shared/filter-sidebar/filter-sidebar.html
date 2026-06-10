@@ -1,0 +1,184 @@
+<mat-card class="filter-sidebar">
+
+  <div class="filter-header">
+
+    <h2>Filters</h2>
+
+    <button
+      mat-button
+      color="primary">
+
+      Clear All
+
+    </button>
+
+  </div>
+
+  <!-- Price -->
+
+  <mat-expansion-panel expanded>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Price Range
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <div class="price-values">
+
+      <span>₹100</span>
+
+      <span>₹2000</span>
+
+    </div>
+
+    <mat-slider min="100" max="2000">
+
+      <input matSliderThumb>
+
+    </mat-slider>
+
+  </mat-expansion-panel>
+
+  <!-- Flavour -->
+
+  <mat-expansion-panel expanded>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Flavour
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <mat-checkbox>Chocolate</mat-checkbox>
+
+    <mat-checkbox>Vanilla</mat-checkbox>
+
+    <mat-checkbox>Red Velvet</mat-checkbox>
+
+    <mat-checkbox>Butterscotch</mat-checkbox>
+
+    <mat-checkbox>Black Forest</mat-checkbox>
+
+  </mat-expansion-panel>
+
+  <!-- Weight -->
+
+  <mat-expansion-panel expanded>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Weight
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <mat-chip-set>
+
+      <mat-chip-option>
+        500g
+      </mat-chip-option>
+
+      <mat-chip-option>
+        1 Kg
+      </mat-chip-option>
+
+      <mat-chip-option>
+        2 Kg
+      </mat-chip-option>
+
+      <mat-chip-option>
+        3 Kg
+      </mat-chip-option>
+
+    </mat-chip-set>
+
+  </mat-expansion-panel>
+
+  <!-- Occasion -->
+
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Occasion
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <mat-checkbox>Birthday</mat-checkbox>
+
+    <mat-checkbox>Anniversary</mat-checkbox>
+
+    <mat-checkbox>Wedding</mat-checkbox>
+
+    <mat-checkbox>Baby Shower</mat-checkbox>
+
+  </mat-expansion-panel>
+
+  <!-- Type -->
+
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Cake Type
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <mat-checkbox>Eggless</mat-checkbox>
+
+    <mat-checkbox>With Egg</mat-checkbox>
+
+    <mat-checkbox>Premium</mat-checkbox>
+
+  </mat-expansion-panel>
+
+  <!-- Rating -->
+
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Rating
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <mat-radio-group>
+
+      <mat-radio-button value="5">
+        ★★★★★
+      </mat-radio-button>
+
+      <mat-radio-button value="4">
+        ★★★★☆
+      </mat-radio-button>
+
+      <mat-radio-button value="3">
+        ★★★☆☆
+      </mat-radio-button>
+
+    </mat-radio-group>
+
+  </mat-expansion-panel>
+
+  <button
+    mat-flat-button
+    color="primary"
+    class="apply-btn">
+
+    Apply Filters
+
+  </button>
+
+</mat-card>

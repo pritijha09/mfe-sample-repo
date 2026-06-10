@@ -1,0 +1,55 @@
+<section class="product-list-page">
+
+  <div class="page-header">
+
+    <h1>All Cakes</h1>
+
+    <div class="actions">
+
+      <mat-form-field>
+
+        <mat-label>
+          Sort By
+        </mat-label>
+
+        <mat-select>
+
+          <mat-option>
+            Popularity
+          </mat-option>
+
+          <mat-option>
+            Price Low To High
+          </mat-option>
+
+          <mat-option>
+            Price High To Low
+          </mat-option>
+
+        </mat-select>
+
+      </mat-form-field>
+
+    </div>
+
+  </div>
+
+  <div class="layout">
+
+    <app-filter-sidebar />
+
+    <div class="product-grid">
+
+      @for(product of products(); track product.id){
+
+        <app-product-card
+          [product]="product">
+        </app-product-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

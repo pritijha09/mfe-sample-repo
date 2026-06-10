@@ -1,0 +1,19 @@
+.section {
+  padding: 60px;
+}
+
+.category-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+mat-card {
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}

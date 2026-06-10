@@ -1,0 +1,145 @@
+.newsletter-section {
+
+  padding: 100px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #fff7f8 0%,
+    #fff3e0 100%
+  );
+}
+
+.newsletter-content {
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 0.8fr;
+
+  gap: 48px;
+
+  align-items: center;
+}
+
+.offer-badge {
+
+  display: inline-block;
+
+  background: #ffe4ec;
+
+  color: #e91e63;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.newsletter-left h2 {
+
+  font-size: 3rem;
+
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  color: #2d2d2d;
+}
+
+.newsletter-left p {
+
+  color: #666;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  margin-bottom: 32px;
+}
+
+.benefits {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.benefit {
+
+  padding: 12px 18px;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.08);
+
+  font-weight: 500;
+}
+
+.newsletter-right mat-card {
+
+  padding: 32px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.1);
+}
+
+.newsletter-right h3 {
+
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+mat-form-field {
+
+  width: 100%;
+
+  margin-bottom: 16px;
+}
+
+.subscribe-btn {
+
+  width: 100%;
+
+  height: 48px;
+
+  border-radius: 30px;
+}
+
+small {
+
+  display: block;
+
+  margin-top: 16px;
+
+  text-align: center;
+
+  color: #777;
+}
+
+@media(max-width: 768px) {
+
+  .newsletter-content {
+
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-left h2 {
+
+    font-size: 2rem;
+  }
+}

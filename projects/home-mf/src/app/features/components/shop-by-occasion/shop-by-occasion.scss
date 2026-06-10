@@ -1,0 +1,121 @@
+.occasion-section {
+  padding: 80px 24px;
+  background: #fffaf7;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+.occasion-grid {
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 24px;
+}
+
+.occasion-card {
+  position: relative;
+  height: 320px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+
+  cursor: pointer;
+
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  &:hover .overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.overlay {
+    z-index: 1;
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 24px;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  transition: all 0.3s ease;
+
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+}
+
+.overlay button {
+     z-index: 2;
+  width: fit-content;
+  border-radius: 24px;
+}
+
+/* Placeholder backgrounds */
+
+.birthday {
+  background-image:
+    url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3');
+}
+
+.anniversary {
+  background-image:
+    url('https://images.unsplash.com/photo-1519225421980-715cb0215aed');
+}
+
+.wedding {
+  background-image:
+    url('https://images.unsplash.com/photo-1535254973040-607b474cb50d');
+}
+
+.baby {
+  background-image:
+    url('https://images.unsplash.com/photo-1519689680058-324335c77eba');
+}
+
+.valentine {
+  background-image:
+    url('https://images.unsplash.com/photo-1518199266791-5375a83190b7');
+}
+
+.graduation {
+  background-image:
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+}

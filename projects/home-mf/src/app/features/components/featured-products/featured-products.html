@@ -1,1 +1,106 @@
-<p>featured-products works!</p>
+<section class="featured-section">
+
+  <div class="section-header">
+
+    <span class="section-tag">
+      ⭐ Featured Collection
+    </span>
+
+    <h2>Featured Cakes</h2>
+
+    <p>
+      Handpicked cakes loved by thousands of customers.
+    </p>
+
+  </div>
+
+  <div class="products-grid">
+
+    @for(cake of [1,2,3,4]; track cake) {
+
+      <mat-card class="cake-card">
+
+        <div class="image-container">
+
+          <span class="badge">
+            Bestseller
+          </span>
+
+          <button
+            mat-icon-button
+            class="wishlist-btn">
+
+            <mat-icon>
+              favorite_border
+            </mat-icon>
+
+          </button>
+
+          <img
+            src="https://placehold.co/400x300"
+            alt="Cake">
+
+        </div>
+
+        <mat-card-content>
+
+          <div class="rating">
+            ★★★★★
+            <span>(4.9)</span>
+          </div>
+
+          <h3>Chocolate Truffle Cake</h3>
+
+          <p class="description">
+            Rich chocolate layers with premium
+            truffle frosting.
+          </p>
+
+          <div class="price-row">
+
+            <div>
+
+              <span class="price">
+                ₹699
+              </span>
+
+              <span class="old-price">
+                ₹899
+              </span>
+
+            </div>
+
+            <span class="discount">
+              20% OFF
+            </span>
+
+          </div>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+
+          <button
+            mat-flat-button
+            color="primary">
+
+            Add To Cart
+
+          </button>
+
+          <button
+            mat-stroked-button>
+
+            View Details
+
+          </button>
+
+        </mat-card-actions>
+
+      </mat-card>
+
+    }
+
+  </div>
+
+</section>

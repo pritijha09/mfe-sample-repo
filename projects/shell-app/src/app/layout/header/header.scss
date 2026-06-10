@@ -1,0 +1,123 @@
+.header-toolbar {
+
+  height: 80px;
+
+  background: white;
+
+  box-shadow:
+    0 2px 12px rgba(0,0,0,.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+}
+
+.logo-section {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.logo-icon {
+
+  color: #e91e63;
+
+  font-size: 32px;
+
+  width: 32px;
+
+  height: 32px;
+}
+
+.logo-text {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #e91e63;
+}
+
+.search-section {
+
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin: 0 40px;
+}
+
+.search-field {
+
+  width: 100%;
+
+  max-width: 600px;
+}
+
+.action-section {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.location-btn {
+
+  color: #555;
+}
+
+.profile-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header-toolbar {
+
+    padding: 0 12px;
+  }
+
+  .search-section {
+
+    display: none;
+  }
+
+  .location-btn span,
+  .profile-btn span {
+
+    display: none;
+  }
+
+  .logo-text {
+
+    font-size: 20px;
+  }
+}

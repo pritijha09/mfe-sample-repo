@@ -1,1 +1,75 @@
-<p>shop-by-occasion works!</p>
+<section class="occasion-section">
+
+  <div class="section-header">
+    <h2>Shop By Occasion</h2>
+    <p>
+      Find the perfect cake for every celebration.
+    </p>
+  </div>
+
+  <div class="occasion-grid">
+
+    <div class="occasion-card birthday">
+      <div>
+        <h3>Birthday Cakes</h3>
+        <p>Make birthdays extra special</p>
+        
+      </div>
+      <button mat-raised-button (click)="redirectToCategory('birthday')">
+          Explore
+        </button>
+    </div>
+
+    <div class="occasion-card anniversary">
+      <div class="overlay">
+        <h3>Anniversary Cakes</h3>
+        <p>Celebrate love beautifully</p>
+        <button mat-raised-button (click)="redirectToCategory('anniversary')">
+          Explore
+        </button>
+      </div>
+    </div>
+
+    <div class="occasion-card wedding">
+      <div class="overlay">
+        <h3>Wedding Cakes</h3>
+        <p>Elegant cakes for your big day</p>
+        <button mat-raised-button (click)="redirectToCategory('wedding')">
+          Explore
+        </button>
+      </div>
+    </div>
+
+    <div class="occasion-card baby">
+      <div class="overlay">
+        <h3>Baby Shower</h3>
+        <p>Sweet moments deserve sweet cakes</p>
+        <button mat-raised-button (click)="redirectToCategory('baby')">
+          Explore
+        </button>
+      </div>
+    </div>
+
+    <div class="occasion-card valentine">
+      <div class="overlay">
+        <h3>Valentine's Day</h3>
+        <p>Spread love with every bite</p>
+        <button mat-raised-button (click)="redirectToCategory('valentine')">
+          Explore
+        </button>
+      </div>
+    </div>
+
+    <div class="occasion-card graduation">
+      <div class="overlay">
+        <h3>Graduation</h3>
+        <p>Celebrate achievements in style</p>
+        <button mat-raised-button (click)="redirectToCategory('graduation')">
+          Explore
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>

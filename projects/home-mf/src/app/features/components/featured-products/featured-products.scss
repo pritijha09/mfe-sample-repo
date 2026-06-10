@@ -1,0 +1,229 @@
+.featured-section {
+
+  padding: 90px 24px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #fffaf7
+  );
+}
+
+.section-header {
+
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-tag {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 40px;
+
+  background: #fff0f5;
+
+  color: #e91e63;
+
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+
+  font-size: 2.8rem;
+
+  margin-bottom: 12px;
+}
+
+.section-header p {
+
+  color: #666;
+
+  max-width: 600px;
+
+  margin: auto;
+}
+
+.products-grid {
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 28px;
+}
+
+.cake-card {
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  transition: all .3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.08);
+
+  &:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+      0 20px 40px rgba(0,0,0,.15);
+  }
+}
+
+.image-container {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.image-container img {
+
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: cover;
+
+  transition: transform .4s ease;
+}
+
+.cake-card:hover img {
+
+  transform: scale(1.08);
+}
+
+.badge {
+
+  position: absolute;
+
+  top: 16px;
+
+  left: 16px;
+
+  z-index: 1;
+
+  background: #ff4081;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.wishlist-btn {
+
+  position: absolute;
+
+  top: 16px;
+
+  right: 16px;
+
+  z-index: 1;
+
+  background: white;
+}
+
+.rating {
+
+  color: #ffc107;
+
+  margin-bottom: 12px;
+}
+
+.rating span {
+
+  color: #666;
+}
+
+h3 {
+
+  margin-bottom: 10px;
+
+  font-size: 20px;
+}
+
+.description {
+
+  color: #666;
+
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+.price-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.price {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #e91e63;
+}
+
+.old-price {
+
+  margin-left: 8px;
+
+  text-decoration: line-through;
+
+  color: #999;
+}
+
+.discount {
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+mat-card-actions {
+
+  padding: 0 16px 20px;
+
+  display: flex;
+
+  gap: 12px;
+}
+
+mat-card-actions button {
+
+  flex: 1;
+}
