@@ -16,7 +16,7 @@
       "shared-material": ["./projects/shared-material/src/public-api.ts"],
       "shared-models": ["./projects/shared-models/src/public-api.ts"],
       "shared-state": ["./projects/shared-state/src/public-api.ts"],
-      "shared-store": ["./dist/shared-store"],
+      "shared-store": ["./projects/shared-store/src/public-api.ts"],
       "shared-theme": ["./projects/shared-theme/src/public-api.ts"],
       "shared-ui": ["./projects/shared-ui/src/public-api.ts"]
     },
