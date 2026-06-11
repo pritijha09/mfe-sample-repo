@@ -1,5 +1,5 @@
 {
   "products": "https://products-mf.vercel.app/remoteEntry.json",
   "auth-mfe": "https://auth-mfe-chi.vercel.app/remoteEntry.json",
-  "home-mf": "http://localhost:4204/remoteEntry.json"
+  "home-mf": "https://home-mf.vercel.app/remoteEntry.json"
 }
