@@ -1,3 +1,16 @@
+.signup-container{
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #fff7f0,
+    #ffe5d4
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
 .signup-card {
   max-width: 500px;
   margin: 40px auto;
