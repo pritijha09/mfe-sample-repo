@@ -1,6 +1,6 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { AppState } from 'shared-state';
+import { AppState, TokenService } from 'shared-state';
 import { Header } from './layout/header/header';
 
 @Component({
@@ -12,10 +12,16 @@ import { Header } from './layout/header/header';
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
-export class App {
+export class App implements OnInit{
   protected readonly title = signal('shell-app');
+  public isLoggedIn: boolean = false;
   private readonly router = inject(Router);
   private readonly appState = inject(AppState);
+  private readonly tokenService = inject(TokenService);
+
+  ngOnInit() {
+    this.isLoggedIn = this.tokenService.isLoggedIn();
+  }
 
   onProducts() {
     this.router.navigate(['/products'], {
