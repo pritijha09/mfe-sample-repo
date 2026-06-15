@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
+      "shared-config": ["./dist/shared-config"],
       "shared-material": ["./projects/shared-material/src/public-api.ts"],
       "shared-models": ["./projects/shared-models/src/public-api.ts"],
       "shared-state": ["./projects/shared-state/src/public-api.ts"],
@@ -121,6 +122,12 @@
     },
     {
       "path": "./projects/shared-store/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-config/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-config/tsconfig.spec.json"
     }
   ]
 }
