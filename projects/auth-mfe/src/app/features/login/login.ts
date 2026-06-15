@@ -28,7 +28,6 @@ export class Login {
   }
 
   login() {
-    this.router.navigate(['/home']);
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
       // Handle login logic here, e.g., call an authentication service
@@ -40,6 +39,7 @@ export class Login {
       this.authService.login(payload).subscribe({
         next: (response) => {
           console.log(response)
+          this.router.navigate(['/home']);
         },
         error: (error) => {
           console.log(error)
