@@ -15,21 +15,21 @@
 
         <input
           matInput
-          formControlName="username"
+          formControlName="email"
           placeholder="Enter username">
 
         <mat-icon matPrefix>person</mat-icon>
 
-        @if(loginForm.controls['username'].touched &&
-            loginForm.controls['username'].errors?.['required']) {
+        @if(loginForm.controls['email'].touched &&
+            loginForm.controls['email'].errors?.['required']) {
 
           <mat-error>
             Username is required
           </mat-error>
         }
 
-        @if(loginForm.controls['username'].touched &&
-            loginForm.controls['username'].errors?.['minlength']) {
+        @if(loginForm.controls['email'].touched &&
+            loginForm.controls['email'].errors?.['minlength']) {
 
           <mat-error>
             Username must be at least 4 characters

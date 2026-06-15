@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { SharedMaterialModule } from 'shared-material';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,10 +18,11 @@ export class Login {
   public hidePassword = true;
   public fb = inject(FormBuilder);
   public router = inject(Router);
+  public authService = inject(AuthService);
 
   constructor() {
     this.loginForm = this.fb.group({
-      username: ['', [Validators.required]],
+      email: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
   }
@@ -28,9 +30,21 @@ export class Login {
   login() {
     this.router.navigate(['/home']);
     if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
+      const { email, password } = this.loginForm.value;
       // Handle login logic here, e.g., call an authentication service
-      console.log('Login submitted', { username, password });
+      console.log('Login submitted', { email, password });
+      const payload = {
+        email,
+        password
+      }
+      this.authService.login(payload).subscribe({
+        next: (response) => {
+          console.log(response)
+        },
+        error: (error) => {
+          console.log(error)
+        }
+      })
     } else {
       console.log('Form is invalid');
     }
