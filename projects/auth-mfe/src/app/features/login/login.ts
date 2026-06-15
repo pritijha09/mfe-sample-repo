@@ -3,6 +3,7 @@ import { SharedMaterialModule } from 'shared-material';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
+import { TokenService } from 'shared-state';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class Login {
   public fb = inject(FormBuilder);
   public router = inject(Router);
   public authService = inject(AuthService);
+  public tokenService = inject(TokenService);
 
   constructor() {
     this.loginForm = this.fb.group({
@@ -38,7 +40,9 @@ export class Login {
       }
       this.authService.login(payload).subscribe({
         next: (response) => {
+          this.tokenService.setToken(response.token);
           console.log(response)
+
           this.router.navigate(['/home']);
         },
         error: (error) => {

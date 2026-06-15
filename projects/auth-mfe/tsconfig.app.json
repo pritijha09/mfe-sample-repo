@@ -6,6 +6,6 @@
     "outDir": "../../out-tsc/app",
     "types": []
   },
-  "include": ["src/**/*.ts", "../../projects/shared-material/src/**/*.ts"],
+  "include": ["src/**/*.ts", "../../projects/shared-material/src/**/*.ts", "../shared-state/src/lib/services/token.service.ts"],
   "exclude": ["src/**/*.spec.ts"]
 }
