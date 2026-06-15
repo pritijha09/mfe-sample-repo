@@ -8,6 +8,7 @@
   "include": [
     "src/**/*.ts",
     "../../projects/shared-ui/src/**/*.ts",
+    "..\\shared-config\\src\\public-api.ts",
     "..\\shared-material\\src\\public-api.ts",
     "..\\shared-models\\src\\public-api.ts",
     "..\\shared-state\\src\\public-api.ts",

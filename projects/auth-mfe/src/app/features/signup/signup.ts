@@ -80,6 +80,7 @@ export class Signup {
       this.authService.signup(payload).subscribe({
         next: (response) => {
           console.log(response)
+          this.router.navigate(['/auth/login']);
         },
         error: (error) => {
           console.log(error)
